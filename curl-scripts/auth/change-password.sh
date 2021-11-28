@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TOKEN="99999999999" OLDPW="anexamplepassword" NEWPW="newpassword" sh curl-scripts/auth/change-password.sh
+
 API="http://localhost:4741"
 URL_PATH="/change-password"
 
