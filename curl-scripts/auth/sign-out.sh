@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# TOKEN="99999999999" sh curl-scripts/auth/sign-out.sh
+# TOKEN="67a236fd6ad9e956e3b81dc5f7b812cd" sh curl-scripts/auth/sign-out.sh
 
 API="http://localhost:4741"
 URL_PATH="/sign-out"

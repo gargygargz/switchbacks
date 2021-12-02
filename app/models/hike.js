@@ -19,11 +19,11 @@ const hikeSchema = new mongoose.Schema(
       required: true
     },
     difficulty: {
-      type: Number,
+      type: String,
       required: true
     },
     rating: {
-      type: Number,
+      type: String,
       required: true
     },
     notes: {

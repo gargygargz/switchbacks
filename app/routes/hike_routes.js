@@ -27,7 +27,7 @@ const requireToken = passport.authenticate('bearer', { session: false })
 // instantiate a router (mini app that only handles routes)
 const router = express.Router()
 
-// INDEX
+// INDEX all hikes
 // GET /hikes
 router.get('/hikes', requireToken, (req, res, next) => {
   Hike.find()
@@ -37,26 +37,26 @@ router.get('/hikes', requireToken, (req, res, next) => {
     .catch(next)
 })
 
-// SHOW
+// SHOW one hike
 // GET /hikes/5a7db6c74d55bc51bdf39793
 router.get('/hikes/:id', requireToken, (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
   Hike.findById(req.params.id)
     .then(handle404)
-  // if `findById` is succesful, respond with 200 and "hike" JSON
+  // if `findById` is successful, respond with 200 and "hike" JSON
     .then((hike) => res.status(200).json({ hike: hike }))
   // if an error occurs, pass it to the handler
     .catch(next)
 })
 
-// CREATE
+// CREATE one hike
 // POST /hikes
 router.post('/hikes', requireToken, (req, res, next) => {
   // set owner of new hike to be current user
   req.body.hike.owner = req.user.id
 
   Hike.create(req.body.hike)
-  // respond to succesful `create` with status 201 and JSON of new "hike"
+  // respond to successful `create` with status 201 and JSON of new "hike"
     .then((hike) => {
       res.status(201).json({ hike })
     })
@@ -66,7 +66,7 @@ router.post('/hikes', requireToken, (req, res, next) => {
     .catch(next)
 })
 
-// UPDATE
+// UPDATE one hike
 // PATCH /hikes/5a7db6c74d55bc51bdf39793
 router.patch('/hikes/:id', requireToken, removeBlanks, (req, res, next) => {
   // if the client attempts to change the `owner` property by including a new
@@ -85,7 +85,7 @@ router.patch('/hikes/:id', requireToken, removeBlanks, (req, res, next) => {
     .catch(next)
 })
 
-// DESTROY
+// DESTROY one hike
 // DELETE /hikes/5a7db6c74d55bc51bdf39793
 router.delete('/hikes/:id', requireToken, (req, res, next) => {
   Hike.findById(req.params.id)
