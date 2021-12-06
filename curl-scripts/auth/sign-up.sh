@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# EMAIL="a@example.com" PASSWORD="a" sh curl-scripts/auth/sign-up.sh
+# EMAIL="x@example.com" PASSWORD="x" sh curl-scripts/auth/sign-up.sh
 
 API="http://localhost:4741"
 URL_PATH="/sign-up"
