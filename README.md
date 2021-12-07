@@ -9,4 +9,4 @@ Calling all nature and hiking enthusiasts! This application allows the user to 1
 
 ### Entity Relationship Diagram ###
 
-![ERD](https://imgur.com/a/iQ1vxq8)
+[ERD](https://imgur.com/a/iQ1vxq8)
