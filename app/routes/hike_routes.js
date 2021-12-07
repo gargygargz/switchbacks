@@ -27,15 +27,27 @@ const requireToken = passport.authenticate('bearer', { session: false })
 // instantiate a router (mini app that only handles routes)
 const router = express.Router()
 
-// INDEX all hikes
+// INDEX all hikes (one user)
 // GET /hikes
 router.get('/hikes', requireToken, (req, res, next) => {
-  Hike.find()
+  // only show hikes created by the currently sign-in user
+  Hike.find({ owner: req.user._id })
   // respond with status 200 and JSON of the hikes
     .then((hikes) => res.status(200).json({ hikes: hikes }))
   // if an error occurs, pass it to the handler
     .catch(next)
 })
+
+// // INDEX all hikes (all users)
+// // GET /hikes
+// router.get('/hikes', requireToken, (req, res, next) => {
+//   // show hikes from all users
+//   Hike.find()
+//   // respond with status 200 and JSON of the hikes
+//     .then((hikes) => res.status(200).json({ hikes: hikes }))
+//   // if an error occurs, pass it to the handler
+//     .catch(next)
+// })
 
 // SHOW one hike
 // GET /hikes/5a7db6c74d55bc51bdf39793
