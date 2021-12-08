@@ -27,6 +27,6 @@ Calling all nature and hiking enthusiasts! This application allows the user to 1
 
 ### Wireframe / Entity Relationship Diagram ###
 
-![Wireframe](./public/switchbacks_wireframe.png/)
+[Wireframe Link](https://imgur.com/a/2E8MM5G)
 
 [ERD Link](https://imgur.com/a/iQ1vxq8)
