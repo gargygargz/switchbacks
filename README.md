@@ -4,9 +4,29 @@ Calling all nature and hiking enthusiasts! This application allows the user to 1
 
 ## Important Links ##
 
-[Deployed API] (https://warm-wave-34072.herokuapp.com)
+- [Deployed API] (https://warm-wave-34072.herokuapp.com)
+- [Deployed Client] (https://gargygargz.github.io/switchbacks-client)
 
+### User Stories ###
 
-### Entity Relationship Diagram ###
+- As a user, I want to sign up with email and password
+- As a user, I want to to sign in with email and password
+- As a user, I want to change password after sign in
+- As a user, I want to create, view, update, and delete hikes I've completed
+- As a user, I want to sign out
 
-[ERD](https://imgur.com/a/iQ1vxq8)
+### Technologies Used ###
+
+- Javascript
+- jQuery
+- HTML/CSS
+- Bootstrap
+- MongoDB
+- Mongoose
+- Express
+
+### Wireframe / Entity Relationship Diagram ###
+
+![Wireframe](./public/switchbacks_wireframe.png/)
+
+[ERD Link](https://imgur.com/a/iQ1vxq8)
